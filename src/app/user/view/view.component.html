@@ -1,0 +1,22 @@
+<div class="table-div table-responsive-xl">
+    <table id="table-content" class="table" *ngIf="displayTable===true">
+        <tr>
+                <th class="left-most">Profile Picture</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Email Address</th>
+                <th>Mobile No.</th>
+                <th>Category</th>
+                <th >Technologies</th>
+        </tr>
+        <tr *ngFor="let objects of dataStorage">
+           <td class="left-most"><img src={{objects.profilePic}} height="100vh" width="100vw" alt="profile_picture"></td>
+           <td>{{objects.name}}</td>
+           <td>{{objects.gender}}</td>
+           <td>{{objects.email}}</td>
+           <td>{{objects.mobile}}</td>
+           <td>{{objects.category}}</td>
+           <td >{{objects.technology}}</td>
+        </tr>
+    </table>
+</div>

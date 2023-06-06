@@ -1,0 +1,112 @@
+#create-user-div{
+    margin:5%;
+    margin-left:20%;
+    align-items: center;
+    text-align: center;
+    width:60vw;
+}
+.block-label{
+    display:block;
+}
+.form-div{
+    background-color: rgb(210, 234, 255);
+    border-radius: 5%;
+    box-shadow: 5% 1% 1% 5%;
+    padding: 5%;
+}
+.submit-data{
+    color:white;
+    text-decoration: none; 
+}
+.form-group{
+    margin: 4%;
+}
+label{
+    color: rgb(7, 7, 102);
+    font-weight: 350;
+    float:left;
+}
+.error{
+    font-size:10px;
+    display:block;
+    color: rgb(156, 4, 4);
+    font-weight: bold;
+}
+input,select{
+    font-weight: 100;
+}
+button{
+    margin: 5%;
+    display:inline !important;
+}
+.modal-div{
+    margin:5%;
+    position: absolute;
+    top: 10%;
+    width: 50vw;
+    background-color: white;
+    display: inline;
+    align-items: center;
+    text-align: center;
+    left: 20vw;
+    border-radius: 5%;
+    box-shadow: 2px 2px 1px 5px rgb(225, 237, 250);
+    padding: 5%;
+    overflow-wrap: break-word;
+}
+.modal-content{
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+li{
+    display: flex;
+    justify-content:center;
+    list-style-type: none;
+    padding: 2%;
+    margin: 2%;
+}
+strong{
+    padding-right: 1%;
+}
+p{
+    overflow:auto;
+    overflow-wrap: break-word;
+}
+img{
+    overflow: visible;
+}
+.image{
+    overflow: visible;
+    width: 10vw;
+}
+@media (max-width:720px) {
+    p{
+        overflow:auto;
+        overflow-wrap: break-word;
+    }
+    strong{
+        overflow:auto;
+        overflow-wrap: break-word;
+    }
+    .modal-div{
+        top: 20%;
+        width: 70vw;
+        left:5vw;
+    }
+}
+
+@media (max-width:500px) {
+    p{
+        width: 25vw;
+        overflow:auto;
+        overflow-wrap: break-word;
+    }
+    strong{
+        width: 25vw;
+        overflow:auto;
+        overflow-wrap: break-word;
+    }
+}
+
+
