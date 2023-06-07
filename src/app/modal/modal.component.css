@@ -1,0 +1,12 @@
+.submit-data{
+    /* submit button styling */
+    color:white;
+    text-decoration: none; 
+}
+button{
+    margin: 5%;
+}
+li{
+    overflow:auto;
+    overflow-wrap: break-word;
+}

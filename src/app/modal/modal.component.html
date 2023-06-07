@@ -1,0 +1,40 @@
+<div  class="modal-div" id="myModal">
+  <!-- modal created -->
+    <div class=""  tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Preview Details</h5>
+          </div>
+          <div class="modal-body" id="modal-body">
+           <ul>
+            <!-- data displayed using input decorator -->
+            <li><strong>Name : </strong> 
+                <p>{{ data.name}}</p>
+            </li>
+            <li><strong>Gender : </strong> 
+                <p>{{data.gender}}</p>
+            </li>
+            <li><strong>Email Address : </strong><p>
+                 {{data.email}}
+                </p></li>
+            <li><strong>Mobile No. : </strong><p>
+                 {{data.mobile}}
+                </p></li>
+            <li><strong>Category : </strong><p> 
+                {{data.category}}
+            </p></li>
+            <li><strong>Technologies : </strong> <p>
+                {{data.technology}}
+            </p></li>
+            <li ><strong>Profile Picture : </strong> <p class="image"><img src={{data.profilePic}} height="100%" width="100%" id="image" alt="no_profile_picture"></p></li>
+           </ul>
+           <!-- cancel button to close modal on click -->
+           <button class="btn btn-danger" (click)=" modalClose()" data-mdb-dismiss="modal-div">Cancel</button>
+           <!-- submit button to share data into services and redirect it to views page -->
+           <button class="btn btn-info " ><a routerLink="users/view" (click)="sendDataService()" class="submit-data">Submit</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 

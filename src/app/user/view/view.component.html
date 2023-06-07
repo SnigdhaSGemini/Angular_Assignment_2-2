@@ -1,6 +1,8 @@
 <div class="table-div table-responsive-xl">
     <table id="table-content" class="table" *ngIf="displayTable===true">
+        <!-- if services contains at least one value to display, then only table is created -->
         <tr>
+            <!-- create table header to store data -->
                 <th class="left-most">Profile Picture</th>
                 <th>Name</th>
                 <th>Gender</th>
@@ -9,6 +11,7 @@
                 <th>Category</th>
                 <th >Technologies</th>
         </tr>
+        <!-- for each data entry, display form data in tabular format -->
         <tr *ngFor="let objects of dataStorage">
            <td class="left-most"><img src={{objects.profilePic}} height="100vh" width="100vw" alt="profile_picture"></td>
            <td>{{objects.name}}</td>
