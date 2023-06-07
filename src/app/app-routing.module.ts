@@ -8,6 +8,7 @@ const routes: Routes = [
     path: 'users' , loadChildren:()=>import('./user/user.module')
     .then(modulee=>modulee.UserModule)
   }
+  //to redirect path to components of users module 
 
 ];
 

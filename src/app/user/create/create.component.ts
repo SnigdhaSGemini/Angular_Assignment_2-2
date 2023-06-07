@@ -13,6 +13,7 @@ export class CreateComponent {
   profilePicture: any;//to store profile picture URL
   technologies: string[] = [];//to store all technologies checkbox mcqs
   FormDataObject:any;//to store the object of form data
+  previewclicked=false;//to check if preview is clicked or not
 
   lettersAndSpacesPattern = /^[a-zA-Z][a-zA-Z\s]*$/;//regex for name
   emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;//regex for email
@@ -90,6 +91,7 @@ export class CreateComponent {
 
   // to validate form and pass data in modal component
   modalOpen() {this.storeData();
+    this.previewclicked=true;
     if(this.name?.valid &&
       this.gender?.valid &&
       this.email?.valid &&

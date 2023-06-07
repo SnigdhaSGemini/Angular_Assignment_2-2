@@ -8,7 +8,7 @@
 
                 <label for="Name">Name</label>
                 <input type="text" class="form-control" id="name"  name="name" placeholder="Enter Name" formControlName="name">
-                <span class="error" *ngIf="name && name.invalid ">Enter Valid Name</span>
+                <span class="error" *ngIf="(name && name.invalid && name.touched)||(name && name.invalid && previewclicked==true)">Enter Valid Name</span>
 
             </div>
 
@@ -35,7 +35,7 @@
 
                 <label for="email">Email address</label>
                 <input type="text" name="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" formControlName="email">
-                <span class="error" *ngIf="email && email.invalid && gender && gender.valid">Enter Valid Email</span>
+                <span class="error" *ngIf="(email && email.invalid && email.touched && email.value!=='')||(email && email.invalid && previewclicked==true)">Enter Valid Email</span>
               </div>
 
               <div class="form-group">
@@ -43,7 +43,7 @@
                  <!-- display mobile number dialog box -->
               
                 <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Enter Mobile Number" formControlName="mobile">
-                <span class="error" *ngIf="mobile && mobile.invalid && email && email.valid">Enter Valid Mobile Number</span>
+                <span class="error" *ngIf="(mobile && mobile.invalid && mobile.touched && mobile.value!=='')||(mobile && mobile.invalid && previewclicked==true)">Enter Valid Mobile Number</span>
             </div>
 
             <div class="col form-group">
@@ -61,7 +61,7 @@
                   <option value="OBC">OBC</option>
                 </select>
 
-                <span class="error" *ngIf="category && category.invalid && mobile && mobile.valid">Choose Category</span>
+                <span class="error" *ngIf="(category && category.invalid && category.touched )||(category && category.invalid && previewclicked==true)">Choose Category</span>
               </div>
               
               <div class="form-group">
@@ -93,7 +93,7 @@
                   <label class="form-check-label" for="inlineCheckbox5">Javascript</label>
                 </div>
 
-                <span class="error" *ngIf="tech && tech.invalid && category && category.valid">Select Technologies</span>
+                <span class="error" *ngIf="(tech && tech.invalid && tech.touched)||(tech && tech.invalid && previewclicked==true)">Select Technologies</span>
 
               </div>
 
